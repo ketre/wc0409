@@ -1,0 +1,36 @@
+body {
+    background-color: #e3e1dc;
+    color: #3b312a;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+#box {
+    display: inline-grid;
+    grid-template-columns: auto;
+    width: 50%;
+    border: 5px solid #3b312a;
+    background-color: rgba(195, 182, 165, 0.825);
+    padding: 50px;
+    margin: auto;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+#resultButton {
+    border: none;
+    background-color: #755f7a;
+    color: whitesmoke;
+    padding: 5px 32px;
+    cursor: pointer;
+}
+
+#countdown {
+padding-top: 10%;
+font-size: 2vmax;
+
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- meta data -->
+<head>
+    <title>CFG Homework</title>
+    <link rel="icon" type="text/png" href="favicon-32x32.png">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- wrapper container so that everything looks neat -->
+<div id="box">
+    <h1>Math flash test</h1>
+    <h2>Every time you reload the page, a random math question will appear below.</h2>
+    <div>Let's test your knowledge. You have 10 seconds to answer!</div>
+<br>
+<!-- inner container so that spanning elements are in-line -->
+    <div id="innerBox">
+        <span id="firstNum">
+
+        </span>
+        <span id="operator"></span>
+        <span id="secondNum"></span>
+        <span>=</span>
+        <!-- onchange event calls the function to check your answer -->
+        <input type="number" id="sum" placeholder="Your answer" onchange="check()">
+        <button id="resultButton">
+            Let's see
+        </button>
+    </div>
+    
+</div>
+<!--  this is where the countdown script is inserted -->
+<div id="countdown"></div>
+
+</body>
+<script src="TEST.js"></script>
+</html>
