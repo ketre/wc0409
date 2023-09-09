@@ -1,0 +1,10 @@
+Research unshift(), shift() and split()
+Write a short answer and explain what each one of them does
+Use use unshift(), shift() and split() each in an example with theme ‘CFGdegree
+
+Shift/unshift are methods, applied to arrays.
+The unshift() adds new elements to the beginning of an array.
+The shift() method removes the first item of an array - and returns it.
+
+split() splits a string into an array of substrings, and returns the array.
+

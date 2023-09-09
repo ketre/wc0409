@@ -1,0 +1,83 @@
+<html>
+
+<body>
+    <p> 1. Shift, unshift, split</p>
+    <p> Shift/unshift are methods, applied to arrays.</p>
+    <p> The unshift() adds new elements to the beginning of an array.</p>
+    <p> The shift() method removes the first item of an array - and returns it.</p>
+    <p> split() splits a string into an array of substrings, and returns the array. </p>
+
+    <!-- split()demo -->
+    <p id="courseList"></p>
+    <!-- unshift()demo -->
+    <p id="newCourseList"></p>
+    <!-- shift() demo -->
+    <span> I'm on the </span><span id="myCourse"></span><span>Course with Code First Girls</span>
+    <br><br>
+    <p> 2. Object methods</p>
+    <p> JS objects store keyed collections of data. Methods are functions stored as object properties.</p>
+    <br><br>
+    <p> 3. DOM Elements</p>
+    <p>DOM is a programming interface that allows you to access and manipulate the elements of a web page. JavaScript
+        can be used to access the DOM and change the content, structure and style of a web page.</p>
+    <p>mouseover: The mouse pointer is moved over an element</p>
+    <p>mouseout: The mouse pointer is moved away from the element</p>
+
+    <button id="myButton" onmouseover=mouseover() onmouseout=mouseout()>This button is an example of onmouseout
+        & onmouseover events.</button>
+    <button id="clickButton" onclick=click()>Click me!</button>
+    
+    <script>
+
+        // 1.
+        let courses = "Data, Product Management, Full-stack";
+        console.log(courses)
+        const myArray = courses.split(",");
+
+        document.getElementById("courseList").innerHTML = myArray;
+        console.log(myArray);
+
+        myArray.unshift('Software')
+        console.log(myArray)
+
+        let course = myArray.shift()
+        document.getElementById("myCourse").innerHTML = course + " ";
+        console.log(course)
+       
+        // 2.
+
+        const programmingLanguage = {
+            name: "",
+            isEasy: false,
+            abbreviation: "",
+        };
+
+        let JavaScript = Object.create(programmingLanguage);
+        JavaScript.name = "JavaScript";
+        JavaScript.isEasy = false;
+        JavaScript.abbreviation = "JS"
+
+        let HTML = Object.create(programmingLanguage);
+        HTML.name = "HyperText Markup Language";
+        HTML.isEasy = true;
+        HTML.abbreviation = "html"
+
+        console.table([JavaScript, HTML]);
+
+        // 3. 
+
+        //for whatever reason, I couldn't get the onclick to work..
+        function click() {
+            document.getElementById("clickButton").style.color = "yellow";
+            // document.getElementsByTagName("p").style.fontSize = "12px";
+        }
+        function mouseover() {
+            document.getElementById("myButton").style.backgroundColor = "magenta";
+        }
+
+        function mouseout() {
+            document.getElementById("myButton").style.backgroundColor = "white";
+        }
+    </script>
+</body>
+</html>

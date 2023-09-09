@@ -37,26 +37,25 @@ var downloadTimer = setInterval(function () {
   if (timeleft <= 0) {
     clearInterval(downloadTimer);
     document.getElementById("countdown").innerHTML =
-        "Time's up, maybe next time.";
+      "Time's up, maybe next time.";
   } else if (timeleft > 1) {
     document.getElementById("countdown").innerHTML =
-        timeleft + " seconds remaining";
+      timeleft + " seconds remaining";
   } else if ((timeleft = 1)) {
     document.getElementById("countdown").innerHTML =
       timeleft + " second remaining";
   }
   timeleft -= 1;
-}, 1000); //1000 is a multiplier so that the countdown = -1s 
+}, 1000); //1000 is a multiplier so that the countdown = -1s
 
 //a function to compare the correct answer (realSum) to the user's input (userSum)
 function check() {
-    let realSum = eval(randomFirstNum + randomOperator + randomSecondNum);
+  let realSum = eval(randomFirstNum + randomOperator + randomSecondNum);
   let userSum = parseInt(document.getElementById("sum").value);
-//making sure that the correct answer is given within the 10s timer
+  //making sure that the correct answer is given within the 10s timer
   if (timeleft > 0 && realSum === userSum) {
-      alert("Good job!");
+    alert("Good job!");
   } else if (timeleft > 0 && realSum != userSum) {
     alert("Incorrect. Try again!");
   }
 }
-
