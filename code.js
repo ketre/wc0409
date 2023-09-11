@@ -48,6 +48,7 @@ var downloadTimer = setInterval(function () {
   timeleft -= 1;
 }, 1000); //1000 is a multiplier so that the countdown = -1s
 
+let x = false
 //a function to compare the correct answer (realSum) to the user's input (userSum)
 function check() {
   let realSum = eval(randomFirstNum + randomOperator + randomSecondNum);
@@ -55,7 +56,19 @@ function check() {
   //making sure that the correct answer is given within the 10s timer
   if (timeleft > 0 && realSum === userSum) {
     alert("Good job!");
+    x = true;
+    console.log(x);
   } else if (timeleft > 0 && realSum != userSum) {
     alert("Incorrect. Try again!");
+    x = false;
+  }
+}
+
+//if the answer is correct, all text inside the box changes
+if (x = true){
+  const box = document.getElementById("box");
+  const items = document.getElementsByClassName("heading");
+  for (const item of items) {
+    box.textContent = 'You did great! Now reload the page to solve another puzzle.'
   }
 }
