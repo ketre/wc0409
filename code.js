@@ -58,6 +58,7 @@ function check() {
     alert("Good job!");
     x = true;
     console.log(x);
+    farewell();
   } else if (timeleft > 0 && realSum != userSum) {
     alert("Incorrect. Try again!");
     x = false;
@@ -66,10 +67,12 @@ function check() {
 
 // THE BELOW CODE DOESN'T WORK AS I INTENDED, SO COMMENTING IT OUT
 //if the answer is correct, all text inside the box changes
-// if (x=true){
-//   const box = document.getElementById("box");
-//   const items = document.getElementsByClassName("heading");
-//   for (const item of items) {
-//     item.textContent = 'You did great! Now reload the page to solve another puzzle.'
-//   }
-// }
+function farewell() {
+  if (x=true){
+    const box = document.getElementById("box");
+    const items = document.getElementsByClassName("heading");
+    for (const item of items) {
+      box.textContent = 'You did great! Now reload the page to solve another puzzle.'
+    }
+  }
+}
