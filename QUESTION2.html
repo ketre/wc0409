@@ -26,58 +26,68 @@
     <button id="myButton" onmouseover=mouseover() onmouseout=mouseout()>This button is an example of onmouseout
         & onmouseover events.</button>
     <button id="clickButton" onclick=click()>Click me!</button>
-    
+
     <script>
 
         // 1.
+
+        // creating an array
         let courses = "Data, Product Management, Full-stack";
         console.log(courses)
-        const myArray = courses.split(",");
 
+
+
+        // will return an array of CFG courses using comma as delimeter
+        const myArray = courses.split(",");
         document.getElementById("courseList").innerHTML = myArray;
         console.log(myArray);
 
+        // will return the whole array with Software at the beginning
         myArray.unshift('Software')
         console.log(myArray)
 
+        // will return Data and put it inside the html tag (I'm on the Data course with CFG) 
         let course = myArray.shift()
         document.getElementById("myCourse").innerHTML = course + " ";
         console.log(course)
-       
-        // 2.
 
+        // 2.
+        //Creating an object template here
         const programmingLanguage = {
             name: "",
             isEasy: false,
             abbreviation: "",
         };
-
+        // adding JS to the prototype
         let JavaScript = Object.create(programmingLanguage);
         JavaScript.name = "JavaScript";
         JavaScript.isEasy = false;
         JavaScript.abbreviation = "JS"
 
+        //  adding html to the prototype
         let HTML = Object.create(programmingLanguage);
         HTML.name = "HyperText Markup Language";
         HTML.isEasy = true;
         HTML.abbreviation = "html"
-
+        // returning in table form 
         console.table([JavaScript, HTML]);
 
         // 3. 
 
-        //for whatever reason, I couldn't get the onclick to work..
+        //for whatever reason, I couldn't get the onclick to work.. But the idea was forthe text colour to change to yellow once clicked.
         function click() {
             document.getElementById("clickButton").style.color = "yellow";
             // document.getElementsByTagName("p").style.fontSize = "12px";
         }
+        // button background will turn pink when you hover the mouse over the button.
         function mouseover() {
             document.getElementById("myButton").style.backgroundColor = "magenta";
         }
-
+        // button background will go back to white  when your mouse leaves the element.
         function mouseout() {
             document.getElementById("myButton").style.backgroundColor = "white";
         }
     </script>
 </body>
+
 </html>
